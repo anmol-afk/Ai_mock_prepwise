@@ -67,12 +67,11 @@ import { vapi } from "@/lib/vapi.sdk";
         setCallStatus(CallStatus.CONNECTING);
 
         await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
-        variableValues: {
-        username: userName,
-        userid: userId,
-        },
+            variableValues: {
+                username: userName,
+                userid: userId,
+            }
         })
-
     }
     
     const handleDisconnect = async () => {
